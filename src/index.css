@@ -24,3 +24,8 @@
 .content-div:hover{
   background-image: linear-gradient(to right, #4e9f3d, #1E5128, #191a19)!important;
 }
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
