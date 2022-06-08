@@ -17,7 +17,7 @@ export const Skills = () => {
 
   if(english){
     return (
-      <div name='skills' className='bg-[#191a19] text-gray-300 h-screen w-full'>
+      <div name='skills' className='bg-transparent text-gray-300 h-screen w-full'>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>
             <p className='text-4xl font-bold inline border-b-4 border-[#4e9f3d]'>Skills</p>
@@ -70,7 +70,7 @@ export const Skills = () => {
     )
   } else {
     return (
-      <div name='skills' className='bg-[#191a19] text-gray-300 h-screen w-full'>
+      <div name='skills' className='bg-transparent text-gray-300 h-screen w-full'>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>
             <p className='text-4xl font-bold inline border-b-4 border-[#4e9f3d]'>Habilidades</p>

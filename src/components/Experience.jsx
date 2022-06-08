@@ -9,7 +9,7 @@ export const Experience = () => {
 
   if(english){
     return (
-      <div name='experience' className='w-full md:h-screen bg-[#191A19] text-gray-300'>
+      <div name='experience' className='w-full md:h-screen bg-transparent text-gray-300'>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div className='pb-8'>
             <p className='text-4xl font-bold inline border-b-4 border-[#4e9f3d]'>Experience</p>
@@ -42,11 +42,11 @@ export const Experience = () => {
                   React JS Application
                 </span>
                 <div className='pt-8 text-center'>
-                  <a href="/" target='_blank'>
+                  <a href="https://todosobreperros.vercel.app/" target='_blank'>
                     <button className='text-center rounded-lg px-4 py-3 m-2 duration-500 bg-white text-gray-700 font-bold text-lg 
                     hover:bg-[#191a19] hover:text-gray-300'>Demo</button>
                   </a>
-                  <a href="/" target='_blank'>
+                  <a href="https://github.com/LorenzoPodio/PI-Dogs-main" target='_blank'>
                     <button className='text-center rounded-lg px-4 py-3 m-2 duration-500 bg-white text-gray-700 font-bold text-lg 
                     hover:bg-[#191a19] hover:text-gray-300'>Code</button>
                   </a>
@@ -59,7 +59,7 @@ export const Experience = () => {
     )
   } else {
     return (
-      <div name='experience' className='w-full md:h-screen bg-[#191A19] text-gray-300'>
+      <div name='experience' className='w-full md:h-screen bg-transparent text-gray-300'>
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div className='pb-8'>
             <p className='text-4xl font-bold inline border-b-4 border-[#4e9f3d]'>Experiencia</p>
@@ -80,7 +80,7 @@ export const Experience = () => {
                   </a>
                   <a href="https://github.com/LorenzoPodio/PG-Henry" target='_blank'>
                     <button className='text-center rounded-lg px-4 py-3 m-2 duration-500 bg-white text-gray-700 font-bold text-lg 
-                    hover:bg-[#191a19] hover:text-gray-300'>Code</button>
+                    hover:bg-[#191a19] hover:text-gray-300'>Codigo</button>
                   </a>
                 </div>
               </div>
@@ -92,13 +92,13 @@ export const Experience = () => {
                   Aplicación React JS
                 </span>
                 <div className='pt-8 text-center'>
-                  <a href="/" target='_blank'>
+                  <a href="https://todosobreperros.vercel.app/" target='_blank'>
                     <button className='text-center rounded-lg px-4 py-3 m-2 duration-500 bg-white text-gray-700 font-bold text-lg 
                     hover:bg-[#191a19] hover:text-gray-300'>Demo</button>
                   </a>
-                  <a href="/" target='_blank'>
+                  <a href="https://github.com/LorenzoPodio/PI-Dogs-main" target='_blank'>
                     <button className='text-center rounded-lg px-4 py-3 m-2 duration-500 bg-white text-gray-700 font-bold text-lg 
-                    hover:bg-[#191a19] hover:text-gray-300'>Code</button>
+                    hover:bg-[#191a19] hover:text-gray-300'>Codigo</button>
                   </a>
                 </div>
               </div>

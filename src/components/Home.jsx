@@ -3,6 +3,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi';
 import ProfilePic from '../assets/profile-pic.png';
 import { Link } from 'react-scroll';
 import { useLanguageContext } from '../context/LanguageContext';
+import v1 from '../assets/Space2.mp4';
 
 export const Home = () => {
   const { english } = useLanguageContext();
@@ -10,7 +11,8 @@ export const Home = () => {
 
   if (english) {
     return (
-      <div name='home' className='w-full h-screen bg-[#191A19]'>
+      <div name='home' className='w-full h-screen bg-transparent'>
+        <video className="object-cover w-screen h-screen fixed left-[0%] -z-10" src={v1} muted autoPlay loop></video>
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
           <p className='text-[#4E9F3D]'>
             Hello! My name is
@@ -47,7 +49,8 @@ export const Home = () => {
     )
   } else {
     return (
-      <div name='home' className='w-full h-screen bg-[#191A19]'>
+      <div name='home' className='w-full h-screen bg-transparent'>
+        <video className="object-cover w-screen h-screen fixed left-[0%] -z-10" src={v1} muted autoPlay loop></video>
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
           <p className='text-[#4E9F3D]'>
             Hola! Mi nombre es

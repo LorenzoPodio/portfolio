@@ -9,6 +9,7 @@ import { Skills } from "./components/Skills";
 function App() {
   return (
     <div>
+      
       <Navbar/>
       <div className='scroll-smooth snap-mandatory snap-y'>
         <Home className='snap-start'/>

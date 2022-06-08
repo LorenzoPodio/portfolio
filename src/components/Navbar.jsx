@@ -1,15 +1,23 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect, useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import ProdilePic from '../assets/profilePic.png';
+import ProfilePic from '../assets/profilePic.png';
 import { Link } from 'react-scroll';
 import { useLanguageContext } from '../context/LanguageContext';
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleCloseNav = () => setNav(!nav);
+  const [color, setColor] = useState(false);
+  const handleChageColor = () => {
+    if(window.scrollY >= 30) setColor(true);
+    else setColor(false); 
+  }
   const {english, setEnglish} = useLanguageContext();
+
+  window.addEventListener('scroll', handleChageColor)
 
   const handleLanguage = () => {
     setEnglish(!english);
@@ -19,10 +27,12 @@ export const Navbar = () => {
   
   if (english) {
     return (
-      <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#191A19] text-gray-300'>
+      <div className={color ? 'fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#000000e7] text-gray-300'
+        :'fixed w-full h-[80px] flex justify-between items-center px-4 bg-transparent text-gray-300'}
+      >
         <div className='flex items-center'>
           <div className='min-w-fit'>
-            <img src={ProdilePic} alt="Logo Img" className='w-[40px]' />
+            <img src={ProfilePic} alt="Logo Img" className='w-[40px]' />
           </div>
           {/* SWITCH */}
           <div className="flex items-center justify-center ml-[75%]">
@@ -33,7 +43,7 @@ export const Navbar = () => {
               <div className="relative">
                 <input id="toogleLanguage" type="checkbox" className="sr-only" onChange={handleLanguage}/>
                 <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-                <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+                <div className="bg-img dot absolute w-6 h-6 rounded-full shadow -left-1 -top-1 transition"></div>
               </div>
               <div className="ml-3 font-normal">
                 EN
@@ -94,7 +104,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#565f69]'>
-              <a href="" target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href="https://drive.google.com/file/d/11vGkj0nLP8elFIsXTcRmiX7Z3SOiMovb/view?usp=sharing" download={true} target='_blank' className='flex justify-between items-center w-full text-gray-300'>
                 Resume <BsFillPersonLinesFill size={30} />
               </a>
             </li>
@@ -104,10 +114,12 @@ export const Navbar = () => {
     )
   } else {
     return (
-      <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#191A19] text-gray-300'>
+      <div className={color ? 'fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#000000e7] text-gray-300'
+        :'fixed w-full h-[80px] flex justify-between items-center px-4 bg-transparent text-gray-300'}
+      >
         <div className='flex items-center'>
           <div className='min-w-fit'>
-            <img src={ProdilePic} alt="Logo Img" className='w-[40px]' />
+            <img src={ProfilePic} alt="Logo Img" className='w-[40px]' />
           </div>
           {/* SWITCH */}
           <div className="flex items-center justify-center ml-[75%]">
@@ -118,7 +130,7 @@ export const Navbar = () => {
               <div className="relative">
                 <input id="toogleLanguage" type="checkbox" className="sr-only" onChange={handleLanguage}/>
                 <div className="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
-                <div className="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+                <div className="dot absolute w-6 h-6 bg-img rounded-full shadow -left-1 -top-1 transition"></div>
               </div>
               <div className="ml-3 font-normal">
                 EN
@@ -179,7 +191,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-500 bg-[#565f69]'>
-              <a href="" target='_blank' className='flex justify-between items-center w-full text-gray-300'>
+              <a href="https://drive.google.com/file/d/1mzh8Kg_2mfPXVNIconboSA9K5ex9WAim/view?usp=sharing" target='_blank' className='flex justify-between items-center w-full text-gray-300'>
                 Curriculum <BsFillPersonLinesFill size={30} />
               </a>
             </li>
